@@ -5,7 +5,7 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
-# dotenv environment variables file
+# environment variables file
 .env
 
 # Builds
