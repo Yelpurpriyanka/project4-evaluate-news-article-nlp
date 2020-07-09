@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Udacity News Article NLP</title>
+  <link href="main.css?4aff7831b21e717f5a14" rel="stylesheet"/></head>
+  <body>
+    <header>
+      <h1>Evaluate a News Article with NLP</h1>
+    </header>
+
+    <main>
+      <form class="" onsubmit="return Client.handleSubmit(event)">
+        <label for="test-statement">
+           Type in a statement below to see what the Aylien NLP understands
+          from it
+        </label>
+        <input
+          required
+          id="test-statement"
+          type="text"
+          placeholder="I love my mom."
+        />
+        <input class="submit-button" type="submit" value="Submit" />
+      </form>
+
+      <section class="text-results">
+        <ul>
+          <li>
+            <h3>Text Polarity:</h3>
+            <p id="text_polarity"></p>
+            <h4>Confidence:</h4>
+            <p id="text_polarity_confidence"></p>
+          </li>
+
+          <li>
+            <h3>Text Subjectivity:</h3>
+            <p id="text_subjectivity"></p>
+            <h4>Confidence:</h4>
+            <p id="text_subjectivity_confidence"></p>
+          </li>
+        </ul>
+      </section>
+
+      
+
+      <form class="" onsubmit="return Client.handleSubmitArticle(event)">
+        <label for="test-url">
+          try putting in the url of an article of news source.
+        </label>
+        <input required id="test-url" type="url" placeholder="Url in format https://..." />
+        <input class="submit-button" type="submit" value="Submit" />
+        
+      </form>
+
+      <section class="url-results">
+        <ul>
+          <li>
+            <h3>Text Polarity:</h3>
+            <p id="polarity"></p>
+            <h4>Confidence:</h4>
+            <p id="polarity_confidence"></p>
+          </li>
+
+          <li>
+            <h3>Text Subjectivity:</h3>
+            <p id="subjectivity"></p>
+            <h4>Confidence:</h4>
+            <p id="subjectivity_confidence"></p>
+          </li>
+
+          <li>
+            <h3>Text Excerpt:</h3>
+            <p id="excerpt"></p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>By Priyanka</p>
+    </footer>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () =>
+          navigator.serviceWorker.register("/service-worker.js")
+        );
+      }
+    </script>
+  <script type="text/javascript" src="bundle-4aff7831b21e717f5a14.min.js?4aff7831b21e717f5a14"></script></body>
+</html>
